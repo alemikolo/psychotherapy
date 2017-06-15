@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Aleksander Fret" />
+    <meta name="application-name" content="NetBeans IDE" />
+    <meta
+      name="keywords"
+      content="wrocław,pomoc we Wrocławiu,porady we Wrocławiu,gabinet,terapeuta,psychoterapeuta,psychoterapeuta wrocław,psycholog,terapia,terapia Wrocław, psychoterapia,psychoterapia wrocław,leczenie uzależnień,leczenie uzależnień wrocław,alkoholizm,narkomania,rzucanie palenia,rzucanie nałogów,nałogi,porady,uczucia,emocje,problemy,pomoc,empatia,zrozumienie,współczucie,psychoterapia indywidualna,psychoterapia grupowa,uzależnienie od alkoholu,uzależnienie od seksu,uzależnienie od pracy,uzaleznienie od zakupów,uzależnienie od narkotyków,uzależnienie do internetu,uzależnienie od hazardu,kryzysy życiowe,współuzależnienia,życie w stresie,stres,jak sobie radzić,udzielam pomocy,trudności,samorozwój,zmiany na lepsze,psychoterapueta z doświadczeniem,DDA,pomoc DDA,dorosłe dzieci alkoholików"
+    />
+    <meta
+      name="description"
+      content="Gabinet psychoterapeutyczny Emilii Fret. Profesjonalna psychoterapia we Wrocławiu. Ulica Łaciarska 28 pok. 107, tel: 663 180 816, e-mail: emiliafret@gmail.com"
+    />
+    <meta name="robots" content="all" />
+    <title>Emilia Fret. Gabinet Psychoterapii we Wrocławiu.</title>
+    <link rel="shortcut icon" href="icons/wwwicon.ico" />
+    <link href="css/main.css" rel="Stylesheet" />
+    <link rel="stylesheet" href="css/vendor/slicknav/slicknav.css" />
+    <script src="js/vendor/modernizr/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <div>
+        <p class="oldbrowser">
+          Używasz przeglądarki, która nie zapewnia odpowiedniego poziomu
+          bezpieczeństwa. Prosimy,
+          <a href="http://browsehappy.com/">zaktualizuj swoją przeglądarkę</a>
+          lub
+          <a href="http://www.google.com/chromeframe/?redirect=true"
+            >aktywuj Google Chrome Frame</a
+          >, by ulepszyć wyświetalnie.
+        </p>
+      </div>
+    <![endif]-->
+
+    <!--Ostrzeżenie-->
+    <div>
+      <p class="js_monit">
+        Przeglądarka, z&nbsp;której korzystasz ma wyłączoną obsługę JavaScript.
+        Prosimy, włącz obsługę JavaScript, by&nbsp;ulepszyć wyświetalnie.
+      </p>
+    </div>
+
+    <!--Nagłówek-->
+    <header>
+      <div id="header_bar">
+        <div id="header_container">
+          <!--Logo-->
+          <div id="logo">
+            <h1><a href="index.html">Emilia Fret</a></h1>
+            <h2><a href="index.html">Gabinet Psychoterapii</a></h2>
+          </div>
+          <!--Menu-->
+          <nav id="top_menu">
+            <ul id="menu">
+              <li>
+                <a
+                  href="index.html"
+                  class="main_link"
+                  title="Strona główna Emilii Fret"
+                  >start</a
+                >
+              </li>
+              <li>
+                <a
+                  href="omnie.html"
+                  class="main_link"
+                  title="Informacje o Emilii Fret"
+                  >o mnie</a
+                >
+              </li>
+              <li>
+                <a
+                  href="oferta.html"
+                  class="main_link"
+                  title="Oferta Gabinetu Psychoterapi Emilii Fret we Wrocławiu"
+                  >oferta</a
+                >
+              </li>
+              <li>
+                <a
+                  href="kontakt.php"
+                  class="main_link active"
+                  title="Kontakt z Emilią Fret"
+                  >kontakt</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!--Treść-->
+    <section>
+      <div id="page_container">
+        <article>
+          <div id="no_js_form_monit">
+            <p>
+              Formularz kontaktowy wymaga aby w&nbsp;Przeglądarce włączona była
+              obsługa Javascript. Proszę włącz obsługę JavaScript w&nbsp;swojej
+              przeglądarce aby poprawić wyświetlanie i&nbsp;uzyskać dostep do
+              tego formularza.
+            </p>
+          </div>
+          <div id="kontakt" class="tresc">
+            <div id="formularz" class="main_section">
+              <h2>Formularz kontaktowy</h2>
+              <? if($aMonits['faild']['error']){?>
+              <div class="alert"><?=$aMonits['failed']['error']?></div>
+              <?}?>
+              <form action="kontakt.php" method="post" autocomplete="off">
+                <fieldset>
+                  <label for="imie" class="main_label">Imię:</label>
+                  <input
+                    id="imie"
+                    type="text"
+                    name="name"
+                    placeholder=""
+                    maxlength="30"
+                    autofocus="autofocus"
+                    value="<?=$aMonits['name']['value']?>"
+                  />
+                  <? if($aMonits['name']['error']){?>
+                  <div class="alert"><?=$aMonits['name']['error']?></div>
+                  <?}?>
+                  <label for="nazwisko" class="main_label">Nazwisko:</label>
+                  <input
+                    id="nazwisko"
+                    type="text"
+                    name="surname"
+                    placeholder=""
+                    maxlength="30"
+                    value="<?=$aMonits['surname']['value']?>"
+                  />
+                  <? if($aMonits['surname']['error']){?>
+                  <div class="alert"><?=$aMonits['surname']['error']?></div>
+                  <?}?>
+                  <label for="email" class="main_label"
+                    >E-mail:<span>(*)</span></label
+                  >
+                  <input
+                    id="email"
+                    type="text"
+                    name="email"
+                    maxlength="100"
+                    class="required"
+                    value="<?=$aMonits['email']['value']?>"
+                  />
+                  <? if($aMonits['email']['error']){?>
+                  <div class="alert"><?=$aMonits['email']['error']?></div>
+                  <?}?>
+                  <label for="temat" class="main_label"
+                    >Temat:<span>(*)</span></label
+                  >
+                  <input
+                    id="temat"
+                    type="text"
+                    name="subject"
+                    maxlength="500"
+                    class="required"
+                    value="<?=$aMonits['subject']['value']?>"
+                  />
+                  <? if($aMonits['subject']['error']){?>
+                  <div class="alert"><?=$aMonits['subject']['error']?></div>
+                  <?}?>
+                  <label for="tresc" class="main_label"
+                    >Treść:<span>(*)</span></label
+                  >
+                  <textarea
+                    id="tresc"
+                    name="content"
+                    maxlength="2000"
+                    class="required"
+                    placeholder=""
+                  >
+<?=$aMonits['content']['value']?></textarea
+                  >
+                  <? if($aMonits['content']['error']){?>
+                  <div class="alert"><?=$aMonits['content']['error']?></div>
+                  <?}?>
+                  <input
+                    id="sendemailcopy"
+                    class="css-checkbox"
+                    type="checkbox"
+                    name="sendemailcopy"
+                    value="1"
+                  />
+                  <label for="sendemailcopy" class="css-label"
+                    >Wyślij do mnie kopię tej wiadomości</label
+                  >
+                  <input type="hidden" name="iform" value="1" />
+                  <input id="robot" type="checkbox" name="robot" value="1" />
+                  <div
+                    class="g-recaptcha"
+                    data-callback="recaptchaCallback"
+                    data-sitekey="6Le3aNoSAAAAAMzqxmNnD6CnzKgbhenePFEdDZ8I"
+                  ></div>
+                  <? if($aMonits['g-recaptcha-response']['error']){?>
+                  <div class="alert">
+                    <?=$aMonits['g-recaptcha-response']['error']?>
+                  </div>
+                  <?}?>
+                  <input
+                    id="submit"
+                    type="submit"
+                    name="submit"
+                    value="Wyślij"
+                  />
+                </fieldset>
+              </form>
+              <p>(*) - pola wymagane</p>
+            </div>
+            <div class="dane_kontaktowe">
+              <section>
+                <div id="wizytowka" class="main_section">
+                  <h2>Dane kontaktowe</h2>
+                  <ul>
+                    <li>E-mail:<br /><?=$aContactData['email']?></li>
+                    <li>Telefon:<br /><?=$aContactData['phone']?></li>
+                    <li>
+                      Adres gabinetu:<br />ul. Łaciarska 28, pok. 107, 50-141
+                      Wrocław
+                    </li>
+                    <li>Komunikacja:<br />Tramwaje: 6, 7, 8, 9, 11, 17, 23</li>
+                  </ul>
+                </div>
+              </section>
+              <section>
+                <div id="mapa" class="main_section">
+                  <h2>Lokalizacja gabinetu</h2>
+                  <iframe
+                    src="https://www.google.com/maps/d/embed?mid=z8ATS_6yeF3A.kEN8wrLpFq2M"
+                  ></iframe>
+                </div>
+              </section>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!--Stopka-->
+    <footer>
+      <div id="footer_container">
+        <p>
+          <a
+            href="index.html"
+            title="Emilia Fret. Gabinet Psychoterapii we Wrocławiu."
+            >&copy; <span id="years"></span> Emilia Fret</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery/jquery-1.11.3.min.js"><\/script>'
+        );
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="js/vendor/slicknav/jquery.slicknav.js"></script>
+    <script src="js/vendor/checkbox/jspatch.js"></script>
+    <script src="js/walidator.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

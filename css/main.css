@@ -1,0 +1,794 @@
+/*FORMATOWANIE OGÓLNE*/
+/* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126  License: none (public domain)*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,ite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;vertical-align: baseline;}
+
+root { 
+    display: block;}
+
+@font-face{
+    font-family: 'ubuntulight';
+    src: url('../fonts/ubuntu-l-webfont.eot');
+    src: url('../fonts/ubuntu-l-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ubuntu-l-webfont.woff2') format('woff2'),
+         url('../fonts/ubuntu-l-webfont.woff') format('woff'),
+         url('../fonts/ubuntu-l-webfont.ttf') format('truetype'),
+         url('../fonts/ubuntu-l-webfont.svg#ubuntulight') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+
+@font-face {
+    font-family: 'ubuntubold';
+    src: url('ubuntu-b-webfont.eot');
+    src: url('../fonts/ubuntu-b-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ubuntu-b-webfont.woff2') format('woff2'),
+         url('../fonts/ubuntu-b-webfont.woff') format('woff'),
+         url('../fonts/ubuntu-b-webfont.ttf') format('truetype'),
+         url('../fonts/ubuntu-b-webfont.svg#ubuntubold') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+
+@font-face {
+    font-family: 'ubunturegular';
+    src: url('../fonts/ubuntu-r-webfont.eot');
+    src: url('../fonts/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ubuntu-r-webfont.woff2') format('woff2'),
+         url('../fonts/ubuntu-r-webfont.woff') format('woff'),
+         url('../fonts/ubuntu-r-webfont.ttf') format('truetype'),
+         url('../fonts/ubuntu-r-webfont.svg#ubunturegular') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+
+cite {
+    font-style: normal;}
+q {
+    quotes: "\201e" "\201d";
+    font-style: italic;
+    font-weight: bold;}
+q:before {
+    content: open-quote;}
+q:after {
+    content: close-quote;}
+
+body {
+    font-family: ubuntulight,'Noto Sans','Trebuchet MS',Helvetica,Arial,Verdana,sans-serif;
+    font-size: 100%;
+    font-size: 16px;
+    font-size: 1em;
+    color: #000000;
+    text-align: center;    
+    background-color: #fafafa;
+    background-image: url('../img/layout/tlo.jpg');}
+
+.oldbrowser, .js_monit{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 100%;
+    color: #ffffff;
+    font-size: 1.2em;
+    background-color: #333333;}
+
+#no_js_form_monit{
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 5%;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1.5em;}
+
+.no-js{}
+
+
+/*FORMATOWANIE NAGŁOWKA*/
+
+#header_bar *{
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -khtml-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;}
+
+#header_bar{    
+    width: 100%;
+    height: 134px;
+    background-color: #5982D6;
+    border-bottom: 6px solid #71D46F;}
+
+#header_container{
+    margin: auto;
+    padding: auto;
+    height: 100%;
+    min-width: 350px;
+    max-width: 1200px;}
+
+#logo{
+    position: relative;
+    z-index: 50;
+    height: 105px;
+    text-align: left;
+    float: left;    
+    padding-left: 20px;
+    padding-top: 35px;}
+
+#logo h1 a{
+    font-family: ubuntubold;
+    font-size: 3em;    
+    line-height: 1em;
+    color: #ffffff;
+    text-decoration: none;}
+
+#logo h2 a{
+    font-family: ubuntulight;
+    font-size: 1.5em;
+    line-height: 0.1em;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    text-decoration: none;}
+
+#menu{
+    display: block;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 90px;
+    height: 50px;
+    list-style: none;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;}
+
+#menu li {
+    float: left;    
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;}
+     
+.main_link {
+    position: relative;
+    display: block;
+    height: 41px;
+    padding-top: 9px;
+    padding-left: 1.0em;
+    padding-right: 1.0em;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    background: none;}
+
+#menu li a:hover, .active{   
+    color: #5982D6;
+    background-color: #fafafa;
+    height: 41px;
+    border: none;
+    background-image: url('../img/layout/tlo.jpg');}
+
+.slicknav_menu {
+    display:none;}
+
+
+/*FORMATOWANIE TREŚCI*/
+
+#page_container{
+    z-index: 9999;
+    padding: 30px 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 350px;
+    max-width: 1200px;}
+
+#start *{
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -khtml-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;}
+
+.tresc {
+    padding: 0px 20px 0px 20px;}
+
+#start .redirect {
+    margin: 15%;
+    text-align: center;
+    font-size: 2em;}
+
+#start .redirect a{
+    color: #5982D6;
+    font-style: italic;
+    text-decoration: none;}
+
+#start .redirect a:hover{
+    color: #71D46F;}
+
+@media screen and (max-width: 768px){
+    #start .redirect {
+        margin: 10%;        
+        font-size: 1.5em;}
+}
+
+@media screen and (max-width: 550px){
+    #start .redirect {
+        margin: 5%;        
+        font-size: 1.25em;}
+}
+
+@media screen and (max-width: 400px){
+    #start .redirect {
+        margin:0px;
+        min-width:200px; 
+        font-size: 1em;}
+}
+
+
+
+
+
+.main_section{
+    background-color: #ffffff;    
+    margin-bottom: 30px;
+    padding-bottom: 1em;}
+
+.main_section h2{
+    width: 100%;
+    height: 44px;
+    background-color: #5982D6;    
+    padding-top: 8px;
+    color: #ffffff;
+    font-size: 1.7em;
+    text-align: left;
+    text-indent: 0.5em;
+    border-bottom: 6px solid #71D46F;}
+
+.main_section p{
+    padding: 1em 1em 0em 1em;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    text-align: justify;}
+
+.charakterystyki{
+    display: flex;}
+
+.specialization {
+    align-items: stretch;
+    flex: 1;
+    width: 32%;
+    float: left; }
+
+div.specialization:nth-of-type(2){
+    margin-left: 2%;
+    margin-right: 2%;}
+
+.specialization p{
+    text-align: left;}
+
+.links, .links:visited {
+    color: #5982D6;
+    font-style: italic;
+    text-decoration: none;}
+
+.links:hover {
+    text-decoration: underline;
+    color: #71D46F;}
+
+
+
+/*FORMATOWANIE O MNIE*/
+
+#o_mnie p {
+    text-indent: 0em;
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 1.3em;}
+
+#wstep{
+    padding-bottom: 20px;}
+
+#wstep img{
+    display: block;
+    width: 22%;
+    min-width: 200px;
+    max-width: 400px;
+    float:left;
+    margin: 1.5em 1.5em 0 1.5em;}
+
+#praktyka, #wyksztalcenie {
+    align-items: stretch;
+    width: 48%;
+    padding-bottom: 1em;}
+
+#wyksztalcenie {
+    margin-right: 4%;}
+
+.adventages{
+    font-size: 1.1em;
+    line-height: 1.3em;
+    clear: both;
+    width: 90%;}
+
+.adventages li{
+    text-align: left;
+    margin-bottom: 0.8em;
+    list-style: circle;
+    list-style-image: url(../img/layout/star.png);}
+
+.adventages li ul{
+    font-size: 1em;
+    line-height: 1.3em;}
+
+/*FORMATOWANIE OFERTY*/
+
+#oferta {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;}
+
+#pomoc {
+    align-items: stretch;
+    width: 63%;
+    min-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;}
+
+.formalnosci{
+    align-items: stretch;
+    margin-left: 4%;
+    width:33%;
+    min-width: 360px;}
+
+#metody{
+    margin-bottom: 20px;}
+
+#metody, #cennik {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    width: 100%;   }
+
+#metody, #cennik {
+    float: right;}
+
+#pomoc p {
+    margin-bottom: 10px;
+}
+#pomoc ul, #cennik ul{
+    font-size: 1.1em;
+    line-height: 1.3em;
+    padding-right: 10px;
+    margin: 0;}
+
+#pomoc ul li, #cennik ul li{
+    text-align: left;
+    margin-bottom: 0.8em;
+    list-style: circle;
+    list-style-image: url(../img/layout/star.png);}
+
+#cennik ul{
+    margin-top: 1em;}
+
+#metody dl{
+    padding: 0 1em 1em 1em;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    text-align: left;}
+
+#metody dt{
+    margin-top: 1em;
+    font-weight: bold;}
+
+#metody dd{
+    margin-left: 50px;}
+
+/*FORMATOWANIE KONTAKTU*/
+
+.required{}
+
+#kontakt{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;}
+
+#formularz, #wizytowka, #mapa{
+    margin-bottom: 20px;}
+
+#formularz {
+    align-items: stretch;
+    width: 48%;
+    min-width: 360px;}
+
+#formularz form {
+    margin-top: 20px;}
+
+.dane_kontaktowe{
+    align-items: stretch;
+    margin-left: 4%;
+    width:48%;
+    min-width: 360px;}
+
+#wizytowka{
+    width: 100%;
+    float: right;}
+
+#wizytowka ul {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    font-size: 1.1em;
+    text-align: left; }
+
+#wizytowka ul li {
+    width: 100%;
+    list-style: none;
+    margin-bottom: 20px;}
+
+#mapa {
+   width: 100%;
+   float: right;
+}
+#mapa iframe{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 85%;
+    height: 400px;}
+
+#formularz p {    
+    display: none;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;}
+
+#kontakt form{
+    display: none;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;}
+
+#kontakt form label {    
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1em;}
+
+#kontakt form label span {
+    font-family: 'ubuntulight';
+    color: #333333;}
+
+#kontakt form input, #kontakt form textarea {
+    display: block;
+    border: 0;
+    border: 1px solid #cccccc;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 100%;
+    min-width: 300px;
+    text-align: left;
+    font-size: 1.0em;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;}
+
+#kontakt form input {    
+    height: 40px;
+    margin-bottom: 15px;
+    font-family: 'ubuntulight';
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -khtml-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;}
+
+#kontakt form textarea {
+    margin-bottom: 20px;
+    resize: none;
+    font-family: 'ubuntulight';
+    height: 100px;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -khtml-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;}
+
+#kontakt form input:hover, #kontakt form textarea:hover {
+    border: none;
+    border:1px solid #5982D6;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(89, 130, 214, 1.0);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(89, 130, 214, 1.0);
+    box-shadow: inset 0px 0px 5px 0px rgba(89, 130, 214, 1.0);}
+
+#kontakt form input:focus, #kontakt form textarea:focus {
+    border: none;
+    border:1px solid #5982D6;
+    background-color: #D0DBF3;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(89, 130, 214, 1.0);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(89, 130, 214, 1.0);
+    box-shadow: inset 0px 0px 5px 0px rgba(89, 130, 214, 1.0);}
+
+#kontakt form textarea {
+    padding: 10px;
+    height: 120px;}
+
+input[type=checkbox].css-checkbox {
+    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;}
+
+input[type=checkbox].css-checkbox + label.css-label, input[type=checkbox].css-checkbox + label.css-label.clr {
+    padding-left:50px;
+    height:35px; 
+    display:inline-block;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;}
+
+input[type=checkbox].css-checkbox:hover + label.css-label, input[type=checkbox].css-checkbox + label.css-label.chk {
+    background-position: 0 -70px;}
+
+input[type=checkbox].css-checkbox:checked + label.css-label, input[type=checkbox].css-checkbox + label.css-label.chk {
+    background-position: 0 -35px;}
+
+label.css-label {
+    width: 96%;
+    background-image:url(../img/layout/checkbox.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
+   
+#kontakt form #submit {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 40%;
+    min-width: 200px;
+    display: block;
+    border: none;
+    background-color: #5982D6;
+    height: 55px;
+    color: #ffffff;
+    text-align: center;
+    -o-transition: all 0.0s;
+    -ms-transition: all 0.0s;
+    -moz-transition: all 0.0s;
+    -khtml-transition: all 0.0s;
+    -webkit-transition: all 0.0s;
+    transition: all 0.5s;}
+
+#kontakt form #submit:hover {
+    position:relative;
+    z-index:200;
+    text-decoration: underline;   
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);}
+
+#robot {
+    visibility: hidden;}
+
+.g-recaptcha *{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -10px;}
+
+.alert {
+    width: 96%;
+    color: red;
+    font-family: 'ubuntulight';
+    text-align: left;
+    margin-top: -15px;
+    margin-bottom: 15px;}
+
+#kontakt form input.error:hover, #kontakt form textarea.error:hover {
+     border: 1px solid red;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(255, 0, 0, 1.0);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(255, 0, 0, 1.0);
+    box-shadow: inset 0px 0px 5px 0px rgba(255, 0, 0, 1.0);}
+
+#kontakt form input.error:focus, #kontakt form textarea.error:focus {
+    border: 1px solid red;
+    background-color: #ffcebd;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(255, 0, 0, 1.0);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(255, 0, 0, 1.0);
+    box-shadow: inset 0px 0px 5px 0px rgba(255, 0, 0, 1.0);}
+
+#kontakt form input.error, #kontakt form textarea.error {
+    border: 0px;
+    border: none;
+    border: 1px solid red;
+    background-color: #ffcebd;
+    -webkit-box-shadow:none;
+    -moz-box-shadow: none;
+    box-shadow:  none;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(255, 0, 0, 1.0);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(255, 0, 0, 1.0);
+    box-shadow: inset 0px 0px 5px 0px rgba(255, 0, 0, 1.0);}
+
+p.thanks{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10%;
+    background-color: #5982D6;
+    color: #ffffff;
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.5em;
+    text-indent: 0;}
+
+@media screen and (max-width: 1200px){
+    .main_section h2{    
+        height: 42px;    
+        padding-top: 8px;
+        font-size: 1.7em;}
+
+    .main_section p {
+        font-size: 1.1em;
+        text-align: justify;}   
+
+    .specialization p{
+        text-align: left; }
+    
+    #wstep p, .adventages, #pomoc ul, #metody dl, #cennik ul{
+        font-size: 1.1em;}}
+
+@media screen and (max-width: 1100px){
+    .main_section h2{    
+        height: 42px;    
+        padding-top: 8px;
+        font-size: 1.7em;}}
+
+
+@media screen and (max-width: 990px){
+    #specializations, .charakterystyki, #kontakt, #formularz, .dane_kontaktowe, #oferta, #pomoc, .formalnosci{
+        display: block;}
+   
+    .specialization,  #praktyka, #wyksztalcenie, #formularz, .dane_kontaktowe, #pomoc, .formalnosci{        
+        width: 100%;
+        height: auto;
+        clear: both;}
+    
+    .dane_kontaktowe, .formalnosci{
+        margin-left: 0;}
+    
+    #formularz, #wizytowka, #mapa, #cennik{
+        margin-bottom: 40px}
+    
+    #wyksztalcenie{
+        margin-right: 0;}
+
+    div.specialization:nth-of-type(2){
+        margin-left: 0;
+        margin-right: 0;}
+
+    .specialization p{
+        text-align: justify;}}
+    
+
+
+@media screen and (max-width: 768px){
+    .main_section p{
+        text-align: left;}
+    .specialization p{
+        text-align: left;}    
+    .js #menu{
+	display:none;}
+    .js .slicknav_menu{
+        display:block;}
+    .main_link {
+        -webkit-border-radius: 0;
+        border-radius: 0;}
+    #o_mnie p, #o_mnie ul{
+        text-align: left;}
+    #rozwoj {
+        width: 100%;
+        clear: both;}
+    #wyksztalcenie {
+        width: 100%;
+        clear: both;}
+    #formularz {
+        width: 100%;
+        clear: both;}
+    #dane_kontaktowe {
+        width: 100%;
+        clear: both;}
+    #mapa {
+        width: 100%;
+        float: right;}
+    #mapa iframe{
+        width: 85%;
+        height: 400px;}
+    p.thanks{
+        width: 50%;
+        padding: 10%;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        text-indent: 0;}}
+
+@media screen and (max-width: 480px){
+    #o_mnie img{
+        display: block;
+        width: 80%;
+        min-width: 200px;
+        max-width: 400px;
+	clear: both;		
+        margin: 50px 10% 1em 10%;}
+    #o_mnie p {
+        clear:both;}}
+
+@media screen and (max-width: 400px){
+    .main_section h2{
+        width: 100%;
+        height: 42px;            
+        padding-top: 8px;
+        font-size: 1.7em;}
+    
+    .main_section p{
+        font-size: 1.0em;
+        text-align: left;}
+    
+    #wstep p, .adventages, #pomoc ul, #metody dl, #cennik ul{
+        font-size: 1.0em;
+        text-align: left;}
+    
+    #logo{
+        height: 100px;    
+        padding-top: 40px;}
+
+    #logo h1 a{   
+        font-size: 2.6em;    
+        line-height: 1em;
+        color: #ffffff;
+        text-decoration: none;}
+
+    #logo h2 a{;
+        font-size: 1.35em;
+        line-height: 0.1em;
+        letter-spacing: 0.01em;}}
+    
+
+/*FORMATOWANIE STOPKI*/
+footer {    
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;}
+
+#footer_container *{
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -khtml-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;}
+
+#footer_container{
+    clear: both;
+    width:100%;
+    max-width: 1200px;
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px; 
+    border-top: 1px solid #5982D6;}
+
+#footer_container a{
+    color: #000000;
+    font-size: 1em;
+    text-decoration: none;}
+
+#footer_container a:hover{
+    text-decoration: underline;}
